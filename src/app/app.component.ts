@@ -12,4 +12,9 @@ export class AppComponent {
   title = 'AngularCours';
   courseName = "Angular Avancé";
   isDisabled = true;
+
+  startCourse(){
+    console.log("Début du cours :", this.courseName);
+    this.isDisabled = false;
+  }
 }

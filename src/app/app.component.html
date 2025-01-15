@@ -28,8 +28,12 @@
             font-size: 1.2em;
         }
 
-          button {
-            background-color: #bdc3c7;
+        .button-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
             color: #fff;
             border: none;
             border-radius: 5px;
@@ -39,12 +43,30 @@
             transition: background-color 0.3s;
         }
 
+        .disabled-button {
+            background-color: #bdc3c7;
+        }
+
+        .start-button {
+            background-color: #f1c40f;
+        }
+
+        .start-course-button {
+            background-color: #3498db;
+        }
+
+        button:disabled {
+            cursor: not-allowed;
+        }
     </style>
 </head>
 <body>
     <p>Bienvenue dans Courses!</p>
     <p>Ce cours est intitulé</p>
     <h1>{{courseName}}</h1>
-    <button [disabled]="isDisabled">Commencer</button>
+    <div class="button-container">
+        <button [disabled]="isDisabled" class="disabled-button">Commencer</button>
+        <button (click)="startCourse()" class="start-course-button">Commencer le cours</button>
+    </div>
 </body>
 </html>
