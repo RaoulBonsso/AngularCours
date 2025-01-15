@@ -27,11 +27,24 @@
             color: #34495e;
             font-size: 1.2em;
         }
+
+          button {
+            background-color: #bdc3c7;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
     </style>
 </head>
 <body>
     <p>Bienvenue dans Courses!</p>
     <p>Ce cours est intitulé</p>
     <h1>{{courseName}}</h1>
+    <button [disabled]="isDisabled">Commencer</button>
 </body>
 </html>

@@ -10,5 +10,6 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'AngularCours';
-  courseName = "Angular Avancé"
+  courseName = "Angular Avancé";
+  isDisabled = true;
 }
